@@ -1,0 +1,6 @@
+framework module Pods_IdentityCheck {
+  umbrella header "Pods-IdentityCheck-umbrella.h"
+
+  export *
+  module * { export * }
+}
