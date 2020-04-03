@@ -145,7 +145,7 @@ class CameraViewController: UIViewController {
 }
 
 
-//MARK: This extension contains all the functions to set up the camera display for the user.
+//MARK: Camera Functions: This extension contains all the functions to set up the camera display for the user.
 extension CameraViewController {
     //setup the camera view
     private func setupCamera(){
@@ -221,7 +221,7 @@ extension CameraViewController {
 }
 
 
-//MARK: This extension sets the view controller as the capture delegae. The code in this extension handles the image data when the user captures a photo.
+//MARK: AV Capture: This extension sets the view controller as the capture delegae. The code in this extension handles the image data when the user captures a photo.
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -239,7 +239,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
 }
 
 
-//MARK: This extension sets the delegate for photo library picker. The functions here allow a user to select images from their photo library rather than captuer new images.
+//MARK: Image Picker: This extension sets the delegate for photo library picker. The functions here allow a user to select images from their photo library rather than captuer new images.
 extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

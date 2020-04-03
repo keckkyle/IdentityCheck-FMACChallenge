@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         requestAuthorization()
     }
     
-    
+    //Function to check authorization of camera use or request access
     private func requestAuthorization() {
         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == AVAuthorizationStatus.authorized {
             self.cameraAccess = true
@@ -40,8 +40,9 @@ class HomeViewController: UIViewController {
         }
     }
     
-
+    //handle user touch for select photo button
     @IBAction func goToNextView(_ sender: Any) {
+        //Check if authorized to access camera and that there is an available camera before navigating to the camera.
         if cameraAccess && UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
             goToCamera()
         } else {
@@ -49,10 +50,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    //navigate to camera view
     private func goToCamera(){
         self.performSegue(withIdentifier: "takePhotos", sender: nil)
     }
     
+    //navigate to select photo view
     private func goToSelect(){
         self.performSegue(withIdentifier: "selectPhotos", sender: nil)
     }

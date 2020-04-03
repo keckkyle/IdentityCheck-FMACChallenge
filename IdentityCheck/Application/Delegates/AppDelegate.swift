@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //set navigation bar back button color to dark gray
+        let navBar = UINavigationBar.appearance()
+        navBar.tintColor = .darkGray
+        
         //Set up AWS Credentials to access Rekognize service
         let credentialsProvider = AWSCognitoCredentialsProvider(
             regionType: .USEast1,

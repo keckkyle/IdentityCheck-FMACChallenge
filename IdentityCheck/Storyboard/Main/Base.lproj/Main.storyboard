@@ -414,7 +414,7 @@ The results of this app should be used for entertainment purposes only. The deve
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ElD-hT-NBI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kjb-8H-6tR"/>
+                    <navigationItem key="navigationItem" title="Result" id="kjb-8H-6tR"/>
                     <connections>
                         <outlet property="loadingIndicator" destination="guq-Ga-Uai" id="XDZ-lE-iHv"/>
                         <outlet property="loadingView" destination="w0g-nO-s56" id="Nc8-bK-byj"/>
@@ -422,9 +422,11 @@ The results of this app should be used for entertainment purposes only. The deve
                         <outlet property="matchSublabel" destination="2v4-B2-gTT" id="aeM-os-IgY"/>
                         <outlet property="sourceView" destination="ywp-fv-1pR" id="AE0-Cg-R2g"/>
                         <outlet property="targetView" destination="bB2-Gt-vRD" id="Tm3-8w-765"/>
+                        <segue destination="EiJ-yF-ZsQ" kind="unwind" unwindAction="returnToCamera:" id="rx0-28-stM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqV-V7-YhS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="EiJ-yF-ZsQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1809" y="304"/>
         </scene>
@@ -449,7 +451,7 @@ The results of this app should be used for entertainment purposes only. The deve
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="q79-gN-xbk"/>
-        <segue reference="teu-Yz-ysf"/>
+        <segue reference="Zp8-It-IFN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="50" height="50"/>
