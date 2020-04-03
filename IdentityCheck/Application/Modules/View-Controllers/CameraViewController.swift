@@ -141,14 +141,6 @@ class CameraViewController: UIViewController {
             vc.targetData = targetImageData
         }
     }
-    
-    func noCamera() {
-        os_log("Unable access device camera")
-        showAlert(title: "Unable to access camera", message: "This feature requires access to your device's camera. You may still select photos saved in your photo library.", view: self, acceptButton: "Select photos") {
-            action in
-            self.performSegue(withIdentifier: "noCamera", sender: nil)
-        }
-    }
 
 }
 
@@ -159,17 +151,8 @@ extension CameraViewController {
     private func setupCamera(){
         setupCaptureSession()
         setupDevice()
-        //check that device has a current camera
-        if currentCamera == nil{
-            noCamera()
-            return
-        }
         setupInput()
         setupOutput()
-        if AVCaptureVideoPreviewLayer(session: session).connection == nil {
-            noCamera()
-            return
-        }
         setupPreviewLayers()
         startRunningSession()
     }

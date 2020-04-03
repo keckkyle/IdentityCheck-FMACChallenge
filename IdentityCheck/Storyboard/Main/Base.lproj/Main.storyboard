@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sB-au-nvz">
-                                <rect key="frame" x="20" y="317.33333333333326" width="335" height="336.66666666666674"/>
+                                <rect key="frame" x="20" y="317.33333333333326" width="335" height="382.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Identity Check takes a selfie and a photo of an ID then returns a percentage representing the similarity between the user and the ID photo. The application requires a user to take two photos to be compared. Any photos taken using the app are not stored on the user device or in any server databases. The user may also select photos which are saved in their device's photo library.
 The results of this app should be used for entertainment purposes only. The developers do not guarantee that results are accurate. </string>
@@ -35,25 +35,14 @@ The results of this app should be used for entertainment purposes only. The deve
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZO-0f-Qyv" customClass="RoundedButton" customModule="IdentityCheck" customModuleProvider="target">
-                                <rect key="frame" x="20" y="674" width="335" height="38"/>
+                                <rect key="frame" x="20" y="720" width="335" height="38"/>
                                 <color key="backgroundColor" red="0.8367856145" green="0.92651283740000001" blue="0.88960295919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Take Photos"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Take Photos"/>
+                                <state key="normal" title="Select Photos"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="l1k-ut-6pm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rr9-zZ-kRb" customClass="RoundedButton" customModule="IdentityCheck" customModuleProvider="target">
-                                <rect key="frame" x="20" y="727" width="335" height="36"/>
-                                <color key="backgroundColor" red="0.8367856145" green="0.92651283740000001" blue="0.88960295919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="Select Photos"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Select photos"/>
-                                <connections>
-                                    <segue destination="NDA-zo-0hi" kind="show" id="3dz-t8-1Hi"/>
+                                    <action selector="goToNextView:" destination="kLV-Wa-1cV" eventType="touchDown" id="WyI-2j-QLA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identity Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruG-m7-d8c">
@@ -70,13 +59,10 @@ The results of this app should be used for entertainment purposes only. The deve
                             <constraint firstItem="3sB-au-nvz" firstAttribute="leading" secondItem="M9C-wX-c1C" secondAttribute="leading" constant="20" id="0tq-Fl-lOi"/>
                             <constraint firstItem="ruG-m7-d8c" firstAttribute="leading" secondItem="M9C-wX-c1C" secondAttribute="leading" id="10T-dr-kOw"/>
                             <constraint firstItem="oH4-Pd-XG7" firstAttribute="leading" secondItem="M9C-wX-c1C" secondAttribute="leading" constant="20" id="7pp-3d-bFy"/>
-                            <constraint firstItem="M9C-wX-c1C" firstAttribute="trailing" secondItem="rr9-zZ-kRb" secondAttribute="trailing" constant="20" id="9Xf-IV-6E8"/>
-                            <constraint firstItem="rr9-zZ-kRb" firstAttribute="leading" secondItem="M9C-wX-c1C" secondAttribute="leading" constant="20" id="Hdx-HB-h4f"/>
                             <constraint firstItem="M9C-wX-c1C" firstAttribute="trailing" secondItem="oH4-Pd-XG7" secondAttribute="trailing" constant="20" id="Lkb-TN-YHj"/>
                             <constraint firstItem="oH4-Pd-XG7" firstAttribute="top" secondItem="M9C-wX-c1C" secondAttribute="top" constant="20" id="LmL-Ut-a7s"/>
                             <constraint firstItem="3sB-au-nvz" firstAttribute="top" secondItem="ruG-m7-d8c" secondAttribute="bottom" constant="5" id="Qeg-Xr-Jhx"/>
-                            <constraint firstItem="M9C-wX-c1C" firstAttribute="bottom" secondItem="rr9-zZ-kRb" secondAttribute="bottom" constant="15" id="c18-bC-aot"/>
-                            <constraint firstItem="rr9-zZ-kRb" firstAttribute="top" secondItem="MZO-0f-Qyv" secondAttribute="bottom" constant="15" id="cvL-uR-TZU"/>
+                            <constraint firstItem="M9C-wX-c1C" firstAttribute="bottom" secondItem="MZO-0f-Qyv" secondAttribute="bottom" constant="20" id="TYE-IQ-9Cl"/>
                             <constraint firstItem="MZO-0f-Qyv" firstAttribute="top" secondItem="3sB-au-nvz" secondAttribute="bottom" constant="20" id="j1J-mo-DCw"/>
                             <constraint firstItem="M9C-wX-c1C" firstAttribute="trailing" secondItem="ruG-m7-d8c" secondAttribute="trailing" id="juo-Fp-Ek2"/>
                             <constraint firstItem="ruG-m7-d8c" firstAttribute="top" secondItem="oH4-Pd-XG7" secondAttribute="bottom" constant="-10" id="l7R-Zn-Jnf"/>
@@ -85,6 +71,10 @@ The results of this app should be used for entertainment purposes only. The deve
                         <viewLayoutGuide key="safeArea" id="M9C-wX-c1C"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="99S-bg-AUe"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="takePhotos" id="fpk-CW-aRU"/>
+                        <segue destination="NDA-zo-0hi" kind="show" identifier="selectPhotos" id="Zp8-It-IFN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bA6-Rt-wg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,7 +210,9 @@ The results of this app should be used for entertainment purposes only. The deve
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1ly-Y0-iAQ"/>
+                    <navigationItem key="navigationItem" id="1ly-Y0-iAQ">
+                        <barButtonItem key="backBarButtonItem" title="Select Photos" id="hBd-xY-jji"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="captureButton" destination="nYx-1W-TMA" id="eJa-CD-CRX"/>
                         <outlet property="imagePreview" destination="WK8-Y9-k9z" id="T3H-r5-bNK"/>
@@ -323,7 +315,7 @@ The results of this app should be used for entertainment purposes only. The deve
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUl-OD-dYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="1042"/>
+            <point key="canvasLocation" x="495" y="1048"/>
         </scene>
         <!--Result-->
         <scene sceneID="lzt-uG-XBB">
@@ -456,7 +448,7 @@ The results of this app should be used for entertainment purposes only. The deve
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qon-u6-pbI"/>
+        <segue reference="q79-gN-xbk"/>
         <segue reference="teu-Yz-ysf"/>
     </inferredMetricsTieBreakers>
     <resources>
